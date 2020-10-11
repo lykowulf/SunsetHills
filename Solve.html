@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <style>
         .background {
-           background-image: linear-gradient(to left, #f7b395, #e6c38c, #eb9c99, #fa8884, #a9679a);
+            background-image: linear-gradient(to left, #f7b395, #e6c38c, #eb9c99, #fa8884, #a9679a);
         }
     </style>
 </head>
@@ -47,7 +47,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="//josephdragonportfolio.netlify.app/" target="_blank">Portfolio</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -66,12 +66,44 @@
             </div>
         </div>
     </div>
+    <br />
+    <div class="container">
+    <div class="row">
+        <!--sun set is to moving to the left and the sun is positioned to the left-->
+        <div class="col">
+            <input id="txtSunsetIn1" placeholder="Enter Bldg Height 1" />
+        </div>
+        <div class="col">
+            <input id="txtSunsetIn2" placeholder="Enter Bldg Height 2" />
+        </div>
+        <div class="col">
+            <input id="txtSunsetIn3" placeholder="Enter Bldg Height 3" />
+        </div>
+        <div class="col">
+            <input id="txtSunsetIn4" placeholder="Enter Bldg Height 4" />
+        </div>
+        <div class="col">
+            <input id="txtSunsetIn5" placeholder="Enter Bldg Height 5" />
+        </div>
+        <div class="col">
+            <button class="btn btn-primary" id="btnSunset" onclick="sunsetFoundation()">Click Me</button>
+        </div>
+    </div>
+    <hr />
+    <div class="row">
+        <div class="col"><p id="pSunsetOut"></p></div>
+    </div>
+
+        </div>
+
+
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    <script src="Scripts/custom.js"></script>
 </body>
 
 </html>

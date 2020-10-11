@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="Content/prism.css" rel="stylesheet" />
     <style>
         .background {
             background-image: linear-gradient(to left, #f7b395, #e6c38c, #eb9c99, #fa8884, #a9679a);
@@ -47,7 +48,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="//josephdragonportfolio.netlify.app/" target="_blank">Portfolio</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -67,11 +68,55 @@
         </div>
     </div>
 
+    <div class="row text-center">
+        <div class="col-6 offset-3">
+<pre class="language-js line-numbers">
+<code class="language-js">
+//how many buildings can see the sun
+function sunsetFoundation() {
+//user inputs the numbers
+let bldgHeight1 = Number(document.getElementById("txtSunsetIn1").value);
+let bldgHeight2 = Number(document.getElementById("txtSunsetIn2").value);
+let bldgHeight3 = Number(document.getElementById("txtSunsetIn3").value);
+let bldgHeight4 = Number(document.getElementById("txtSunsetIn4").value);
+let bldgHeight5 = Number(document.getElementById("txtSunsetIn5").value);
+
+
+
+//setting up an array from user input
+let bldgArray = [bldgHeight1, bldgHeight2, bldgHeight3, bldgHeight4, bldgHeight5];
+
+let newArray = [];
+let count = 1;
+let Sun = bldgArray[0];
+newArray.push(Sun);//pushes what the sun hits into a new array
+//Step 3: Traverse the aray from right to left and keep track of the buildings that can see the sunset
+
+for (let loop = 0; loop < bldgArray.length; loop++) {
+if (bldgArray[loop] > Sun) {
+count++;
+newArray.push(bldgArray[loop]);
+Sun = bldgArray[loop];
+
+
+
+}
+}
+//Step 4: Output to the user which buildings can see the sunset and how many buildings can see the sunset
+document.getElementById("pSunsetOut").innerHTML = `There are   ${count} buildings that can see the sun!: [${newArray.join(',')}]`
+}
+
+</code>
+</pre>
+        </div>
+
+    </div>
+
     <!-- Bootstrap core JavaScript -->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    <script src="Scripts/prism.js"></script>
 </body>
 
 </html>

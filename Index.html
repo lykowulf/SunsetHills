@@ -67,21 +67,8 @@
             </div>
         </div>
 
-        <div class="row row-cols-sm-1 row-col-xs-1">
-            <div>
-                <div class="col"><input id="buildSize1" placeholder="Enter Height 1" /></div>
-            </div>
-           
-                <div class="col"><input id="buildSize2" placeholder="Enter Height 2" /></div>
-                <div class="col"><input id="buildSize3" placeholder="Enter Height 3" /></div>
-                <div class="col"><input id="buildSize4" placeholder="Enter Height 4" /></div>
-                <div class="col"><input id="buildSize5" placeholder="Enter Height 5" /></div>
-                <div class="col"><button  class="btn btn-dark" onclick="prettySun()">Click Me</button></div>
-        </div>
-    <hr />
-        <div class="row">
-            <span id="sunOutput"></span>
-        </div>
+
+       
     </div>
 
 
@@ -92,93 +79,7 @@
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-    <script>
-        //step one: add event listener for button click.
-        //document.getElementById("btnHeight").addEventListener("click", function () {
-        //    //document.getElementById("sunsetOutput")
-
-
-        //});
-
-
-        //step 2: gather up user input and stuff it into an array.
-
-
-            
-        function prettySun()
-        {
-
-        let input1 = parseInt(document.getElementById("buildSize1").value);
-
-        let input2 = parseInt(document.getElementById("buildSize2").value);
-
-        let input3 = parseInt(document.getElementById("buildSize3").value);
-
-        let input4 = parseInt(document.getElementById("buildSize4").value);
-
-        let input5 = parseInt(document.getElementById("buildSize5").value);
-
-        let buildArr = [input1, input2, input3, input4, input5];
-            let newArr = [];
-            count = 1;
-            let Max = buildArr[0];
-            newArr.push(Max);
-
-            for (let i = 0; i > buildArr; i++) {
-                if (buildArr[i] > Max) {
-                    count++;
-                    newArr.push(buildArr[i]);
-                    Max = buildArr[i];
-                }
-                document.getElementById("sunOuput").innerHTML = `count: ${count} [${newArr}]`;
-            }
-        }
-
-        //document.getElementbyid("").innerHTML = `count: ${count} [${build}] " "`;
-
-        //function prettySun() {
-        //    let input1 = parseInt(document.getElementById("buildSize1").value);
-        //    let input2 = parseInt(document.getElementById("buildSize2").value);
-        //    let input3 = parseInt(document.getElementById("buildSize3").value);
-        //    let input4 = parseInt(document.getElementById("buildSize4").value);
-        //    let input5 = parseInt(document.getElementById("buildSize5").value);
-        //    let buildingArr = [input1, input2, input3, input4, input5];
-        //    let canSee = ["Building 1 can see the sunset"];
-        //    let tallest = buildingArr[0];
-        //    for (i = 1; i < buildingArr.length; i++) {
-        //        if (buildingArr[i] > tallest) {
-        //            tallest = buildingArr[i];
-        //            canSee.push("Building " + (i + 1) + " can see the sunset");
-        //        }
-        //    }
-
-        //    let resultS = canSee.join(", ");
-        //    document.getElementById("resultS").innerHTML = `<b>${resultS}</b>`;
-        //    document.getElementById("buildSize1").style.height = (input1 * 10) + "%";
-        //    document.getElementById("buildSize2").style.height = (input2 * 10) + "%";
-        //    document.getElementById("buildSize3").style.height = (input3 * 10) + "%";
-        //    document.getElementById("buildsize4").style.height = (input4 * 10) + "%";
-        //    document.getElementById("buildSize5").style.height = (input5 * 10) + "%";
-
-        //}
-
-        //step 3: traverse the array from right to left and keep track of the buildings that can see the sunset
-
-        //step 4 out put to the user which buildings can see the sunset.
-       // linear-gradient(two right, will add a horizontal gradientcolor, color);
-
-       
-
-    </script>
-
-
-
-
-        <!--//let fizz = parseInt(document.getElementById("fizzBuzzInput").value);
-        //let buzz = parseInt(document.getElementById("fizzBuzzInput2").value);
-
-        //let output = fizzBuzz(fizz, buzz);
-        //document.getElementById("fizzBuzzOutput").innerHTML = output;-->
+    
 
 </body>
 
